@@ -17,9 +17,11 @@ Para os objetos de classe de dados foi utilizado variavéis imutavéis por quest
 
 Foi montado três cenários diferentes para demonstrar o uso dos objetos com seus atributos e funções. As informações (input) a serem passadas para os objetos foram colocadas diretamente no main para simular os cenários ao invés de perguntas ao usuários utilizando funções (tipo 'cadastrarProfessor()') para focar na orientação de objetos utilizando Kotlin. 
 
-Existem vários modos de otimizar esse código quando se trata da criação de objetos e a inserção dos mesmos dentro da lista, evitando repetições. Porém, desse modo, está legível e dá pra entender passo a passo a lógica para seguir nos cenários, está mirado em um código mais educacional. 
+## Observações
 
-Já que todos os input são feitos dentro do main, capturar exceções de erros de input são desnecessários.
+- Existem vários modos de otimizar esse código quando se trata da criação de objetos e a inserção dos mesmos dentro da lista, evitando repetições. Porém, desse modo, está legível e dá pra entender passo a passo a lógica para seguir nos cenários, está mirado em um código mais educacional. 
+
+- Já que todos os input são feitos dentro do main, capturar exceções de erros de input são desnecessários.
 
 ## Cenário 1 
 

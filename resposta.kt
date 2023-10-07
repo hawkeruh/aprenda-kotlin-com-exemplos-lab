@@ -2,7 +2,7 @@ enum class Nivel { BASICO, INTERMEDIARIO, AVANCADO }
 
 class Usuario (val nome: String, val id: Int, var email: String)
 
-class Professor (val nome: String, val id: Int, var horas: Int) {
+class Professor (val nome: String, val id: Int, var horas: Int = 0) {
     override fun toString(): String {
         return "Prof. $nome"
     }
@@ -32,17 +32,20 @@ fun main() {
 
     //CENÁRIO 1
     professorLista.remove(Professor("Gustavo", 177, 32))
-    val dracula = Professor("Vlad Tepes", 66, 0)
+    val dracula = Professor("Vlad Tepes", 66)
     professorLista.add(dracula)
-    //Atualizar horas dos professores usando find id
+    
     val conteudo2 = mutableListOf(ConteudoEducacional("Teoria dos Grafos", 30, professorLista))
     val neural = Formacao("Redes Neurais", Nivel.INTERMEDIARIO, conteudo2)
+
     println(neural)
     
     //CENÁRIO 2
     val profDracula = mutableListOf(dracula)
     val conteudo_especializado = mutableListOf(ConteudoEducacional("Circuitos Quânticos", 19, profDracula), ConteudoEducacional("Mecânica Quântica", 30, profDracula), ConteudoEducacional("Teoria da Complexidade Quântica", 13, profDracula))
     val curso_avancado = Formacao("Computação Quântica", Nivel.AVANCADO, conteudo_especializado)
+
+
     println(curso_avancado)
 
     //CENÁRIO 3 
@@ -50,7 +53,7 @@ fun main() {
     curso_avancado.matricular(Usuario("Diego Tranquinas",10044,"trakinasbiscuit@myemail.com"))
     curso_avancado.matricular(Usuario("Simone Cardoso",100682,"fhc_filha@myemail.com"))
 
-    val professorAREA2 = mutableListOf(Professor("Vanice", 300, 0), Professor("Tulio", 301, 0), Professor("Geraldo", 302, 0), dracula)
+    val professorAREA2 = mutableListOf(Professor("Vanice", 300), Professor("Tulio", 301), Professor("Geraldo", 302), dracula)
     val conteudo_mathplus = mutableListOf(ConteudoEducacional("Física", 30, professorAREA2), ConteudoEducacional("Cálculo", 60, professorAREA2), ConteudoEducacional("Algebra Linear", 15, professorAREA2),)
     val curso_fundamentos = Formacao("Fundamentos", Nivel.BASICO, conteudo_mathplus)
 
