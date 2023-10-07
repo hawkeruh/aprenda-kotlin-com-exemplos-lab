@@ -11,6 +11,8 @@ TODO("Crie uma solução em Koltin abstraindo esse domínio. O arquivo [desafio.
 
 # Resposta do Desafio
 
+**Conteudo abaixo editado e adicionado por hawkeruh.**
+
 Para a aplicação foi feito os objetos: 'Usuario', 'Professor', 'ConteudoEducacional' e 'Formacao'.
 
 Para os objetos de classe de dados foi utilizado variavéis imutavéis por questões de segurança. 
